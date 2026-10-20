@@ -17,6 +17,7 @@ if not exist "%TARGET%" (
 
 echo Installing Peer Exchange to "%TARGET%"...
 
+REM Shared agent-skill standard: picked up by OpenCode, Antigravity, and Claude Code
 xcopy /E /I /Y "%SCRIPT_DIR%.agents" "%TARGET%\.agents" >nul
 
 if exist "%TARGET%\PEER_EXCHANGE.md" (
@@ -29,6 +30,7 @@ if exist "%TARGET%\PEER_EXCHANGE.md" (
 echo.
 echo ========================================================
 echo [SUCCESS] Peer Exchange installed to "%TARGET%"!
+echo Run the OpenCode / Antigravity ^<-> Claude loop in that project.
 echo ========================================================
 echo.
 pause
