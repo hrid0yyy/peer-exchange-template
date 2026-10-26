@@ -23,6 +23,7 @@ In this protocol, roles are strictly partitioned:
   - Plans architecture, strategies, milestones, and task checklists.
   - Reviews the Executor's completed work, code diffs, and test outputs.
   - Answers technical questions and resolves edge-case ambiguities.
+  - Performs its own research, decision-making, and verification on critical matters; does not delegate these to the Executor.
   - **Does NOT execute or modify repository code directly.**
 * **The Executor (OpenCode OR Antigravity):**
   - Implements the code, modules, tests, and configurations.

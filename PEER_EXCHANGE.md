@@ -10,7 +10,7 @@ timestamp: "2026-10-21 00:40"
 # Peer Exchange Mailbox
 
 > **Roles**:
-> - **Claude (Planner & Reviewer)**: Designs architecture, reviews implementations, validates findings, and defines task checklists.
+> - **Claude (Planner & Reviewer)**: Designs architecture, reviews implementations, validates findings, and defines task checklists. Performs its own research, decision-making, and verification on critical matters; does not delegate these to the Executor.
 > - **The Executor (OpenCode OR Antigravity)**: Writes code, runs tests/builds, commits via Git, and reports empirical results.
 
 > **📋 Copy-Paste Prompt for Claude:**
