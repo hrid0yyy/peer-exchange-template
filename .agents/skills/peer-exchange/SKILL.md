@@ -61,6 +61,9 @@ Activate this skill whenever:
    * Neither Claude nor the Executor may install packages or dependencies into global/system environments.
    * Any Python (or other runtime) dependency work must run inside a project-local virtual environment.
    * Claude must explicitly command the Executor to create/use that virtual environment; the Executor executes it and reports the venv path.
+5. **No Assumptions / No Silent Retries (Strict):**
+   * If the Executor fails to apply a change, hits an error, or encounters any ambiguity/issue, it must NOT assume, fabricate, or silently retry.
+   * It must stop and report the failure verbatim to Claude (with error output) and wait for Claude's directive before proceeding.
 4. **Copy-Paste Prompt for the User:**
    * Whenever the Executor completes a dispatch and transitions state to `🟡 AWAITING_CLAUDE`, the Executor **MUST** provide a clean 1-click copyable prompt in chat that the user can immediately paste into Claude.
 

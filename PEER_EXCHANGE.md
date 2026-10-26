@@ -13,6 +13,7 @@ timestamp: "2026-10-21 00:40"
 > - **Claude (Planner & Reviewer)**: Designs architecture, reviews implementations, validates findings, and defines task checklists. Performs its own research, decision-making, and verification on critical matters; does not delegate these to the Executor.
 > - **The Executor (OpenCode OR Antigravity)**: Writes code, runs tests/builds, commits via Git, and reports empirical results.
 > - **Strict Rule — No Global Installs**: Neither Claude nor the Executor may install packages/dependencies globally. All Python/other runtime dependency work must happen inside a project-local virtual environment; Claude commands the Executor to create/use it, and the Executor reports the venv path.
+> - **Strict Rule — No Assumptions / No Silent Retries**: If the Executor fails to apply a change, hits an error, or faces any ambiguity/issue, it must not assume, fabricate, or silently retry. It must stop, report the failure verbatim (with error output) to Claude, and wait for Claude's directive.
 
 > **📋 Copy-Paste Prompt for Claude:**
 > *"Please inspect `PEER_EXCHANGE.md`. Review Section 1 & Section 2, fill out Section 3 with your critique, verdict, and numbered task list for the executor, and set `status: AWAITING_EXECUTOR` in the frontmatter."*
