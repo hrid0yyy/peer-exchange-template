@@ -11,6 +11,7 @@ A lightweight, zero-dependency peer collaboration protocol and mailbox skill bet
   - Reviews the Executor's completed work, diffs, and test outputs.
   - Writes prioritized, numbered task checklists for the Executor to execute.
   - Performs its own research, decision-making, and verification on critical matters; does not delegate these to the Executor.
+  - Commands the Executor to use a project-local virtual environment for any dependency work; never global installs.
   - *Does NOT modify project code directly.*
 
 * 🛠️ **The Executor — OpenCode *or* Antigravity (Sole Executor & Builder):**

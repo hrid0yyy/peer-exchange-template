@@ -57,6 +57,10 @@ Activate this skill whenever:
    * `✅ COMPLETE`: Current milestone or goal reached.
 3. **Concise Reporting:**
    * Keep diffs and reports concise; reference committed file paths and commit hashes instead of dumping large code blocks into the file.
+4. **No Global Package Installs (Strict):**
+   * Neither Claude nor the Executor may install packages or dependencies into global/system environments.
+   * Any Python (or other runtime) dependency work must run inside a project-local virtual environment.
+   * Claude must explicitly command the Executor to create/use that virtual environment; the Executor executes it and reports the venv path.
 4. **Copy-Paste Prompt for the User:**
    * Whenever the Executor completes a dispatch and transitions state to `🟡 AWAITING_CLAUDE`, the Executor **MUST** provide a clean 1-click copyable prompt in chat that the user can immediately paste into Claude.
 
